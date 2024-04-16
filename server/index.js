@@ -26,7 +26,11 @@ await db.execute(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     content TEXT,
     user TEXT
-  )
+  );
+  CREATE TABLE IF NOT EXISTS CANALS(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+  );
 `);
 
 io.on("connection", async (socket) => {
